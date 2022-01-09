@@ -5,7 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "commit": "cz"
   },
   "dependencies": {
     "next": "12.0.7",
@@ -17,6 +18,8 @@
     "@types/react": "17.0.38",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.9.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.32.0",
     "eslint-config-next": "12.0.7",
     "eslint-config-prettier": "^8.3.0",
@@ -29,5 +32,10 @@
     "prettier-config-standard": "^4.0.0",
     "typescript": "4.5.4"
   },
-  "prettier": "prettier-config-standard"
+  "prettier": "prettier-config-standard",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
 }
