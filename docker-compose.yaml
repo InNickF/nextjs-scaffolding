@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  nextjs:
+    build:
+      context: .
+      dockerfile: ./compose/nextjs/Dockerfile
+    image: app_local_nextjs
+    volumes:
+      - ./app:/app
+    env_file:
+      - ./compose/nextjs/.env.example
+    ports:
+      - '3000:3000'
