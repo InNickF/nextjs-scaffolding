@@ -21,11 +21,9 @@ This is a Next.js project bootstrapped with `yarn create next-app` and organized
 
 </details>
 
----
-
 ## Getting Started
 
-You will be able to run this projects by two ways, is important to know Docker and Nodejs ecosystems (minimum Nodejs ecosystem), ReactJS/NextJS framework to build your front-end application and GIT for code versioning.
+You will be able to run this projects by two ways, it's important to know Docker and Nodejs ecosystems (minimum Nodejs ecosystem), ReactJS/NextJS framework to build your front-end application and GIT for code versioning.
 
 First step is clone this scaffolding and we give you two options to do this:
 
@@ -35,26 +33,23 @@ First step is clone this scaffolding and we give you two options to do this:
 
 Once you have the project ready to start the next step is setup it.
 
----
-
 ## Setup
 
 We recommend docker setup to run the project, this approach has several advantage, first one is reduce error by dependencies or manually setting in every computer that this scaffolding will run and second one you will never be to worry about developer or production configuration.
 
-Well, now you know this, let us to introduce you the requirements for this approach:
+Let us to introduce you the requirements for this approach:
 
 #### **Requirements**
 
 - Docker
 - Docker compose
 - Git
-- NodeJS >=16.13.2 (LTS)
-- yarn (recommended) or npm.
+- NodeJS >=16.13.2 (LTS) and yarn (recommended) or npm (To use commitizen, it is not required).
 
 To run this project you have to execute the follow command in your terminal:
 
 ```bash
-docker-compose up
+$ docker-compose up
 
 # If you need to rebuild the docker image and compose process add --build flag to this command.
 ```
@@ -68,9 +63,9 @@ _NOTE: Hot reloading is included in this configuration._
 As all NodeJS project you will able to run this project manually, first step is run `cd ./app` to be inside of the project folder then you can execute in your terminal:
 
 ```bash
-yarn install
+$ yarn install
 # and
-yarn dev
+$ yarn dev
 ```
 
 #### **Requirements**
@@ -78,8 +73,6 @@ yarn dev
 - Git
 - NodeJS >=16.13.2 (LTS)
 - yarn (recommended) or npm.
-
----
 
 ## Tech
 
@@ -108,8 +101,6 @@ As we said, this scaffolding uses an Hexagonal Architecture and the follow tech 
 - React Query (Data fetched management) [Missing installation and setup]
 - Context API (Recommended)
 - Redux & Redux Thunk (Only if you need) [Missing installation and setup]
-
----
 
 ## Folder structuring and docs
 
@@ -167,8 +158,6 @@ Here is the general folder information:
 
 **NOTE: Each important folder has its own README file.**
 
----
-
 ## Gitflow
 
 We recommend use [gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) as versioning workflow, also we integrate commitizen to help you to create commits.
@@ -180,14 +169,12 @@ Commitizen is a CLI tool designed for teams. Its main purpose is to define a sta
 We already installed commitizen in this project, to create a commit follow the next commands:
 
 ```bash
-cd ./app
+$ cd ./app
 # and run
-yarn commit
+$ yarn commit
 ```
 
 _NOTE: If you don't have `yarn` you can use `npm run commit` instead, also don't forget add the edited files to your git staging with `git add` command._
-
----
 
 ## Continuous Integration
 
@@ -198,8 +185,6 @@ There are some libraries to help us to create CI pipelines.
 
 And the more important step in our CI it's the build process, we use [github actions](https://docs.github.com/es/actions) to run this CI pipeline.
 
----
-
 ## Production build
 
 There are two ways to create a production build for this app.
@@ -207,8 +192,6 @@ There are two ways to create a production build for this app.
 1. Docker image: There is a production docker image inside `./app` folder (`./app/Dockerfile`) to build it and run it with any container orchestration software (Like K8s) and our recommendation is create a CD pipelines to do this.
 
 2. Go to `./app` folder and follow the official NextJS [deploy documentation](https://nextjs.org/docs/deployment) for manually deploy.
-
----
 
 ## Authors
 
