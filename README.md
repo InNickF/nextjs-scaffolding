@@ -8,7 +8,7 @@
 This is a Next.js project bootstrapped with `yarn create next-app` and organized according to [Hexagonal Software Architecture](<https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)>).
 
 <details>
-  <summary><h3 style="display:inline;">Table of content</h3></summary>
+  <summary>Table of content</summary>
 
 - [Getting Started](#getting-started)
 - [Setup](#setup)
