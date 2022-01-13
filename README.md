@@ -5,7 +5,7 @@
 
 #### _**An approximation to write clean/declarative ReactJS code and NextJS applications.**_
 
-This is a Next.js project bootstrapped with `yarn create next-app` and organized according to [Hexagonal Software Architecture](<https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)>).
+This is a Next.js project bootstrapped with `yarn create next-app` and organized according to [Hexagonal Software Architecture](<https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)>) and SOLID principles.
 
 <details>
   <summary>Table of content</summary>
