@@ -100,7 +100,7 @@ This scaffolding uses an Hexagonal Architecture and the follow tech list will so
 - Axios (Fetcher) [Missing installation and setup]
 - React Query (Data fetched management) [Missing installation and setup]
 - Context API (Recommended)
-- Redux & Redux Thunk (Only if you need) [Missing installation and setup]
+- Redux & Redux Thunk (Only if you need it) [Missing installation and setup]
 
 ## Folder structuring and docs
 
