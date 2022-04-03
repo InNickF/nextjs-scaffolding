@@ -23,7 +23,7 @@ This is a Next.js project bootstrapped with `yarn create next-app` and organized
 
 ## Getting Started
 
-You will be able to run this projects by two ways, it's important to know Docker and Nodejs ecosystems (minimum Nodejs ecosystem), ReactJS/NextJS framework to build your front-end application and GIT for code versioning.
+You will be able to run this projects by two ways, basic knowledge in Docker and Nodejs ecosystems (minimum Nodejs ecosystem), ReactJS/NextJS framework to build your front-end application and GIT for code versioning.
 
 First step is clone this scaffolding and we give you two options to do this:
 
@@ -31,11 +31,11 @@ First step is clone this scaffolding and we give you two options to do this:
 
 2. Run `git clone <REPOSITORY_URL> && cd <PROJECT_FOLDER>` and change git project origin to you new cloud repository to start developing.
 
-Once you have the project ready to start the next step is setup it.
+Once cloned the next step is setup it.
 
 ## Setup
 
-We recommend docker setup to run the project, this approach has several advantage, first one is reduce error by dependencies or manually setting in every computer that this scaffolding will run and second one you will never be to worry about developer or production configuration.
+We recommend docker setup to run the project, this approach has several advantages, first one is reduce error by dependencies or manually setting in every computer that this scaffolding will run and second one you will never be to worry about developer or production configuration.
 
 Let us to introduce you the requirements for this approach:
 
@@ -76,7 +76,7 @@ $ yarn dev
 
 ## Tech
 
-As we said, this scaffolding uses an Hexagonal Architecture and the follow tech list will sort by every architecture category:
+This scaffolding uses an Hexagonal Architecture and the follow tech list will sort by every architecture category:
 
 ### Presentation
 
@@ -100,11 +100,11 @@ As we said, this scaffolding uses an Hexagonal Architecture and the follow tech 
 - Axios (Fetcher) [Missing installation and setup]
 - React Query (Data fetched management) [Missing installation and setup]
 - Context API (Recommended)
-- Redux & Redux Thunk (Only if you need) [Missing installation and setup]
+- Redux & Redux Thunk (Only if you need it) [Missing installation and setup]
 
 ## Folder structuring and docs
 
-It is important to know that each folder in this architecture has a clear objective but none is essential, you can delete or add by your necessities.
+It is important to know that each folder in this architecture has a clear objective but none is essential, you can delete or add by your requirements.
 
 Here is the general folder information:
 
