@@ -82,9 +82,11 @@ This scaffolding uses an Hexagonal Architecture and the follow tech list will so
 
 - NextJS
 - ReactJS
-- Vanilla CSS
-- Some UI library (Missing definition) [Missing installation and setup]
-- Some UI animation library (Missing definition) [Missing installation and setup]
+- Tailwind (Base/Utilities only) and Vanilla CSS
+- GSAP (Animation)
+- ThreeJS/react-three-fiber and friends (3D Library).
+
+NOTE: There is no UI library installed, yet... if you need to install one, you can do it.
 
 ### Application
 

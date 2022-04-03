@@ -15,7 +15,7 @@ const ReactModel = (props) => {
   const obj = useRef<any>()
 
   const { gradient } = useControls({
-    gradient: { value: 0.15, min: 0, max: 1 }
+    gradient: { value: 0.38, min: 0, max: 1 }
   })
 
   useFrame((state) => {
