@@ -8,7 +8,7 @@ module.exports = {
      * Disabling css modules
      * Read more here: https://nanxiaobei.medium.com/disable-css-modules-in-next-js-project-756835172b6e
      */
-    config.module.rules[3].oneOf.forEach((one) => {
+    config.module.rules[2]?.oneOf?.forEach((one) => {
       if (!`${one.issuer?.and}`.includes('_app')) return
       one.issuer.and = [path.resolve(__dirname)]
     })

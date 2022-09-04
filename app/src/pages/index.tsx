@@ -1,6 +1,6 @@
 import { useEffect, useRef, Suspense } from 'react'
 import { gsap } from 'gsap'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas, MeshProps, useFrame } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { DebugLayerMaterial as LayerMaterial, Depth, Fresnel } from 'lamina'
 import { useControls } from 'leva'
@@ -8,7 +8,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import './Home.css'
 
-const ReactModel = (props) => {
+const ReactModel = (props: MeshProps) => {
   const { nodes } = useGLTF('/react-transformed.glb')
 
   const ref = useRef<any>()

@@ -31,7 +31,7 @@ First step is clone this scaffolding and we give you two options to do this:
 
 2. Run `git clone <REPOSITORY_URL> && cd <PROJECT_FOLDER>` and change git project origin to you new cloud repository to start developing.
 
-Once cloned the next step is setup it.
+Once cloned the next step is:
 
 ## Setup
 
@@ -76,7 +76,7 @@ $ yarn dev
 
 ## Tech
 
-This scaffolding uses an Hexagonal Architecture and the follow tech list will sort by every architecture category:
+This scaffolding uses a Hexagonal Architecture, next tech list will sort by every architecture category:
 
 ### Presentation
 
