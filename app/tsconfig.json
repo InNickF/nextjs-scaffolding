@@ -17,13 +17,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./*"
+        "./src/*"
       ],
-      "@*": [
-        "./components/@*"
-      ]
+      "@/commons/*": [
+        "./src/commons/*"
+      ],
     },
     "incremental": true
   },
