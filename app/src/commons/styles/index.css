@@ -1,2 +1,5 @@
-@import url('./theme/_globals.css');
-@import url('./theme/_base.css');
+@import url(./tailwind.css);
+@import url(./vars/index.css);
+@import url(../assets/fonts/fonts/Montserrat/index.css);
+@import url(../assets/fonts/PlayfairDisplay/index.css);
+@import url(./custom.css);

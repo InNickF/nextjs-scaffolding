@@ -1,0 +1,19 @@
+.skeleton-avatar {
+  @apply inline-block mb-3 bg-ghost-2;
+}
+
+.skeleton-avatar--big {
+  @apply w-32 h-32;
+}
+
+.skeleton-avatar--medium {
+  @apply w-16 h-16;
+}
+
+.skeleton-avatar--small {
+  @apply w-8 h-8;
+}
+
+.skeleton-avatar--circle {
+  @apply rounded-full;
+}

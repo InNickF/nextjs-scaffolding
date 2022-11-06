@@ -1,0 +1,20 @@
+/* Loading Animation */
+@keyframes loading {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.skeleton-avatar,
+.skeleton-text {
+  @apply relative overflow-hidden;
+}
+
+.skeleton--active .skeleton-avatar::after,
+.skeleton--active .skeleton-text::after {
+  content: '';
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, var(--silver), transparent);
+  animation: loading 1.5s infinite;
+  @apply absolute block w-full h-full;
+}

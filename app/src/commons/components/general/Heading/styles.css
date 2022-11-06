@@ -1,0 +1,28 @@
+/* 
+* Base
+*/
+
+.heading--subtitle-1-kind,
+.heading--subtitle-2-kind,
+.heading--sub-display-kind {
+  font-family: var(--primary-font) !important;
+}
+
+.heading--display-kind {
+  @apply text-8xl;
+}
+
+.heading--sub-display-kind {
+  @apply text-5xl leading-13;
+}
+
+.heading--subtitle-1-kind {
+  @apply text-lg;
+}
+
+.heading--subtitle-2-kind {
+  @apply text-base leading-5 uppercase;
+}
+/* 
+* END Base
+*/

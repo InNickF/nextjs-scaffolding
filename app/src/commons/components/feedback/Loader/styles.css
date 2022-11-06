@@ -1,0 +1,159 @@
+/* 
+* Base
+*/
+.loader {
+  --current-color: '';
+  --current-color-behind: '';
+  animation: loader-rotation infinite;
+  display: block;
+  border-color: var(--current-color-behind);
+  border-left-color: var(--current-color);
+  transform: rotate(45deg);
+  @apply rounded-full;
+}
+
+/* 
+* END Base
+*/
+
+/* 
+* Color
+*/
+
+/* Primary */
+.loader--primary {
+  --current-color: var(--primary);
+  --current-color-behind: var(--ghost-2);
+}
+
+/* Secondary */
+.loader--secondary {
+  --current-color: var(--secondary);
+  --current-color-behind: var(--secondary-opacity);
+}
+
+/* Tertiary */
+.loader--tertiary {
+  --current-color: var(--tertiary);
+  --current-color-behind: var(--tertiary-opacity);
+}
+
+/* Success */
+.loader--success {
+  --current-color: var(--success);
+  --current-color-behind: var(--success-opacity);
+}
+
+/* Warning */
+.loader--warning {
+  --current-color: var(--warning);
+  --current-color-behind: var(--warning-opacity);
+}
+
+/* Error */
+.loader--error {
+  --current-color: var(--error);
+  --current-color-behind: var(--error-opacity);
+}
+
+/* Above Primary */
+.loader--above-primary {
+  --current-color: var(--text-above-primary);
+  --current-color-behind: var(--ghost-3);
+}
+
+/* Above Secondary */
+.loader--above-secondary {
+  --current-color: var(--text-above-secondary);
+  --current-color-behind: var(--secondary-opacity);
+}
+
+/* Above Tertiary */
+.loader--above-tertiary {
+  --current-color: var(--text-above-tertiary);
+  --current-color-behind: var(--tertiary-opacity);
+}
+
+/* Above Success */
+.loader--above-success {
+  --current-color: var(--text-above-success);
+  --current-color-behind: var(--success-opacity);
+}
+
+/* Above Warning */
+.loader--above-warning {
+  --current-color: var(--text-above-warning);
+  --current-color-behind: var(--warning-opacity);
+}
+
+/* Above Error */
+.loader--above-error {
+  --current-color: var(--text-above-error);
+  --current-color-behind: var(--error-opacity);
+}
+
+/* 
+* END Color
+*/
+
+/* 
+* Size 
+*/
+
+.loader--normal-size {
+  @apply w-6 h-6 border-4;
+}
+.loader--small-size {
+  @apply w-4 h-4 border-2;
+}
+.loader--big-size {
+  width: 1.7rem;
+  height: 1.7rem;
+  @apply border-4;
+}
+.loader--bigger-size {
+  @apply w-12 h-12 border-4;
+}
+
+/* 
+* END Size
+*/
+
+/* 
+* Velocity 
+*/
+
+.loader--default-velocity {
+  animation-duration: 1s;
+}
+.loader--slow-velocity {
+  animation-duration: 1.5s;
+}
+.loader--fast-velocity {
+  animation-duration: 0.4s;
+}
+
+/* 
+* END Velocity
+*/
+
+/* 
+* Timing function 
+*/
+
+.loader--default-timing-function {
+  animation-timing-function: cubic-bezier(0.6, -0.35, 0.45, 1.45);
+}
+.loader--lineal-timing-function {
+  animation-timing-function: linear;
+}
+.loader--ease-timing-function {
+  animation-timing-function: ease;
+}
+.loader--ease-in-out-timing-function {
+  animation-timing-function: ease-in-out;
+}
+
+/* 
+* END Timing function
+*/

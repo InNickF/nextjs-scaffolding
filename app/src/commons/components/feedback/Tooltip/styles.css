@@ -1,0 +1,12 @@
+.tooltip {
+  backdrop-filter: blur(4px);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--ghost-2);
+  max-width: 380px;
+  @apply p-3 bg-glass-2 shadow-lg relative z-control;
+}
+
+[role='tooltip'] {
+  @apply z-control;
+}

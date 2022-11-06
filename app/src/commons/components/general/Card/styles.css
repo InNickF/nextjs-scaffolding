@@ -1,0 +1,9 @@
+.card {
+  @apply bg-card;
+  border-color: var(--cards-border-color);
+  border-width: var(--cards-border-width);
+}
+
+.card--padding {
+  @apply p-3;
+}

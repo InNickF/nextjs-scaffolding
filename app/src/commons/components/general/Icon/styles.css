@@ -1,0 +1,125 @@
+/*
+ * Base
+*/
+
+.icon {
+  --current-color: '';
+  --current-color-hover: '';
+  color: var(--current-color);
+  display: block;
+}
+.icon svg {
+  @apply w-full h-auto m-0 p-0;
+}
+.icon--hover {
+  transition-property: color, width, height;
+  transition-duration: var(--transition-duration);
+  transition-delay: var(--transition-delay);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.icon--hover:hover {
+  color: var(--current-color-hover);
+}
+
+/* 
+* Color
+*/
+
+/* Primary */
+.icon--primary {
+  --current-color: var(--primary);
+  --current-color-hover: var(--primary-hover);
+}
+
+/* Secondary */
+.icon--secondary {
+  --current-color: var(--secondary);
+  --current-color-hover: var(--secondary-hover);
+}
+
+/* Tertiary */
+.icon--tertiary {
+  --current-color: var(--tertiary);
+  --current-color-hover: var(--tertiary-hover);
+}
+
+/* Success */
+.icon--success {
+  --current-color: var(--success);
+  --current-color-hover: var(--success-hover);
+}
+
+/* Warning */
+.icon--warning {
+  --current-color: var(--warning);
+  --current-color-hover: var(--warning-hover);
+}
+
+/* Error */
+.icon--error {
+  --current-color: var(--error);
+  --current-color-hover: var(--error-hover);
+}
+
+/* Above Primary */
+.icon--above-primary {
+  --current-color: var(--text-above-primary);
+  --current-color-hover: var(--text-above-primary-hover);
+}
+
+/* Above Secondary */
+.icon--above-secondary {
+  --current-color: var(--text-above-secondary);
+  --current-color-hover: var(--text-above-secondary-hover);
+}
+
+/* Above Tertiary */
+.icon--above-tertiary {
+  --current-color: var(--text-above-tertiary);
+  --current-color-hover: var(--text-above-tertiary-hover);
+}
+
+/* Above Success */
+.icon--above-success {
+  --current-color: var(--text-above-success);
+  --current-color-hover: var(--text-above-success-hover);
+}
+
+/* Above Warning */
+.icon--above-warning {
+  --current-color: var(--text-above-warning);
+  --current-color-hover: var(--text-above-warning-hover);
+}
+
+/* Above Error */
+.icon--above-error {
+  --current-color: var(--text-above-error);
+  --current-color-hover: var(--text-above-error-hover);
+}
+
+.icon--current-color {
+  --current-color: currentcolor;
+}
+
+/* 
+* END Color
+*/
+
+/* 
+* Size 
+*/
+
+.icon--normal-size {
+  @apply w-6;
+}
+.icon--small-size {
+  @apply w-[1.15rem];
+}
+.icon--big-size {
+  @apply w-7;
+}
+
+/* 
+* END Size
+*/

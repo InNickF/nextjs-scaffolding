@@ -1,0 +1,19 @@
+.skeleton-text {
+  @apply inline-block w-full mb-3 bg-ghost-2;
+}
+
+.skeleton-text-paragraph {
+  @apply h-4;
+}
+
+.skeleton-text-subtitle {
+  @apply h-6;
+}
+
+.skeleton-text-title {
+  @apply h-16;
+}
+
+.skeleton-text--last-half .skeleton-text:last-child {
+  @apply w-5/12;
+}

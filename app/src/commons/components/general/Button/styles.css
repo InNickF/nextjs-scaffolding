@@ -1,0 +1,433 @@
+/* 
+* Base
+*/
+
+.button {
+  --current-bg: '';
+  --current-bg-hover: '';
+  --current-text: '';
+  --current-text-hover: '';
+  --current-ghost-bg: transparent;
+  --current-ghost-bg-hover: '';
+  --current-ghost-text: '';
+  --current-ghost-text-hover: '';
+  --current-active-bg: '';
+  --current-active-text: '';
+  --current-cube-color: '';
+
+  background-color: var(--current-bg);
+  color: var(--current-text);
+  position: relative;
+  transition-property: background-color, color, width, height, border-color;
+  transition-duration: var(--transition-duration);
+  transition-delay: var(--transition-delay);
+  transition-timing-function: var(--transition-timing-function);
+  @apply px-10 py-2 relative overflow-hidden rounded-none inline-block;
+}
+
+.button::before {
+  position: initial;
+  content: unset;
+}
+
+.button:hover {
+  background-color: var(--current-bg-hover);
+  color: var(--current-text-hover);
+}
+
+.button:focus-visible {
+  outline-width: 2px;
+  outline-style: dashed;
+}
+
+.button__container {
+  @apply relative flex justify-center items-center;
+}
+.button--normal-size .button__container__children {
+  @apply relative;
+}
+
+/* 
+* END Base
+*/
+
+/* 
+* Only Icon
+*/
+
+.button--only-icon {
+  @apply px-2;
+}
+
+.button.button--decorated-kind.button--only-icon::after {
+  @apply hidden;
+}
+
+.button--only-icon.button--outline-kind {
+  --padding-x: calc(theme(spacing.2) - 1px);
+  --padding-y: calc(theme(spacing.2) - 1px);
+  padding-top: var(--padding-y);
+  padding-bottom: var(--padding-y);
+  padding-left: var(--padding-x);
+  padding-right: var(--padding-x);
+}
+
+/* 
+* END Only Icon
+*/
+
+/* 
+* Icon Position
+*/
+
+.button--right-icon .button__container {
+  @apply flex-row-reverse -right-1;
+}
+.button--left-icon .button__container {
+  @apply flex-row -left-1;
+}
+.button--loading.button--right-icon .button__container,
+.button--only-icon.button--right-icon .button__container {
+  @apply right-0;
+}
+.button--loading.button--left-icon .button__container,
+.button--only-icon.button--left-icon .button__container {
+  @apply left-0;
+}
+.button--right-icon .button__container__children {
+  @apply mr-2;
+}
+.button--left-icon .button__container__children {
+  @apply ml-2;
+}
+/* 
+* END Icon Position
+*/
+
+/* 
+* Color
+*/
+
+/* Primary */
+.button--primary {
+  --current-bg: var(--primary);
+  --current-bg-hover: var(--primary-hover);
+  --current-text: var(--text-above-primary);
+  --current-text-hover: var(--text-above-primary-hover);
+  --current-ghost-bg-hover: var(--ghost-2);
+  --current-ghost-text: var(--primary);
+  --current-ghost-text-hover: var(--primary);
+  --current-active-bg: var(--primary-hover);
+  --current-active-text: var(--text-above-primary);
+  --current-cube-color: var(--ghost-2);
+}
+.button--primary:focus-visible {
+  outline-color: var(--silver);
+}
+
+/* Secondary */
+.button--secondary {
+  --current-bg: var(--secondary);
+  --current-bg-hover: var(--secondary-hover);
+  --current-text: var(--text-above-secondary);
+  --current-text-hover: var(--text-above-secondary-hover);
+  --current-ghost-bg-hover: var(--secondary-opacity);
+  --current-ghost-text: var(--secondary);
+  --current-ghost-text-hover: var(--secondary);
+  --current-active-bg: var(--secondary-hover);
+  --current-active-text: var(--text-above-secondary);
+  --current-cube-color: var(--secondary-light);
+}
+.button--secondary:focus {
+  outline-color: var(--secondary-dark);
+}
+
+/* Tertiary */
+.button--tertiary {
+  --current-bg: var(--tertiary);
+  --current-bg-hover: var(--tertiary-hover);
+  --current-text: var(--text-above-tertiary);
+  --current-text-hover: var(--text-above-tertiary-hover);
+  --current-ghost-bg-hover: var(--tertiary-opacity);
+  --current-ghost-text: var(--tertiary);
+  --current-ghost-text-hover: var(--tertiary);
+  --current-active-bg: var(--tertiary-hover);
+  --current-active-text: var(--text-above-tertiary);
+  --current-cube-color: var(--tertiary-light);
+}
+.button--tertiary:focus {
+  outline-color: var(--tertiary-dark);
+}
+
+/* Success */
+.button--success {
+  --current-bg: var(--success);
+  --current-bg-hover: var(--success-hover);
+  --current-text: var(--text-above-success);
+  --current-text-hover: var(--text-above-success-hover);
+  --current-ghost-bg-hover: var(--success-opacity);
+  --current-ghost-text: var(--success);
+  --current-ghost-text-hover: var(--success);
+  --current-active-bg: var(--success-hover);
+  --current-active-text: var(--text-above-success);
+  --current-cube-color: var(--success-light);
+}
+.button--success:focus {
+  outline-color: var(--success-dark);
+}
+
+/* Warning */
+.button--warning {
+  --current-bg: var(--warning);
+  --current-bg-hover: var(--warning-hover);
+  --current-text: var(--text-above-warning);
+  --current-text-hover: var(--text-above-warning-hover);
+  --current-ghost-bg-hover: var(--warning-opacity);
+  --current-ghost-text: var(--warning);
+  --current-ghost-text-hover: var(--warning);
+  --current-active-bg: var(--warning-hover);
+  --current-active-text: var(--text-above-warning);
+  --current-cube-color: var(--warning-light);
+}
+.button--warning:focus {
+  outline-color: var(--warning-dark);
+}
+
+/* Error */
+.button--error {
+  --current-bg: var(--error);
+  --current-bg-hover: var(--error-hover);
+  --current-text: var(--text-above-error);
+  --current-text-hover: var(--text-above-error-hover);
+  --current-ghost-bg-hover: var(--error-opacity);
+  --current-ghost-text: var(--error);
+  --current-ghost-text-hover: var(--error);
+  --current-active-bg: var(--error-hover);
+  --current-active-text: var(--text-above-error);
+  --current-cube-color: var(--error-light);
+}
+.button--error:focus {
+  outline-color: var(--error-dark);
+}
+
+/* 
+* END Color
+*/
+
+/* 
+* Disabled
+*/
+
+.button.button--disabled {
+  cursor: not-allowed;
+  @apply bg-disabled text-disabled;
+}
+.button.button--disabled:hover {
+  @apply bg-disabled text-disabled;
+}
+.button--disabled:focus {
+  outline-color: var(--disabled-bg-color);
+}
+
+.button.button--disabled::after,
+.button.button--disabled::before {
+  @apply hidden !important;
+}
+/* 
+* END Disabled
+*/
+
+/* 
+* Size 
+*/
+
+.button--normal-size {
+  @apply text-base;
+}
+.button--small-size {
+  @apply text-xs;
+}
+.button--big-size {
+  @apply text-xl;
+}
+
+.button--normal-size .icon,
+.button--small-size .icon {
+  @apply w-[1.15rem] h-[1.15rem];
+}
+
+.button--only-icon.button--normal-size .icon {
+  width: calc(var(--base-line-height) + 1px);
+  height: calc(var(--base-line-height) + 1px);
+}
+.button--only-icon.button--small-size .icon {
+  width: calc(var(--xs-line-height) + 1px);
+  height: calc(var(--xs-line-height) + 1px);
+}
+.button--only-icon.button--big-size .icon {
+  width: calc(var(--xl-line-height) + 1px);
+  height: calc(var(--xl-line-height) + 1px);
+}
+
+/* 
+* END Size
+*/
+
+/* 
+* Block
+*/
+
+.button--block {
+  @apply w-full;
+}
+
+/* 
+* END Block
+*/
+
+/* 
+* Kind
+*/
+.button.button--decorated-kind::after {
+  content: '';
+  --cube-size: 8px;
+  width: var(--cube-size);
+  height: var(--cube-size);
+  left: calc(100% - var(--cube-size));
+  transition: all 0.3s ease-in-out;
+  background-color: var(--current-cube-color);
+  @apply right-0 bottom-0 block absolute;
+}
+
+.button.button--decorated-kind:hover::after {
+  right: calc(100% - var(--cube-size));
+  @apply left-0;
+}
+
+.button.button--decorated-kind:active::after {
+  @apply w-full;
+}
+
+.button--solid-kind::before,
+.button--only-icon.button--decorated-kind::before {
+  background-color: var(--current-text);
+  content: '';
+  transition: opacity, transform;
+  transition-duration: var(--transition-duration);
+  transition-delay: var(--transition-delay);
+  transition-timing-function: var(--transition-timing-function);
+  @apply right-0 left-0 top-0 bottom-0 opacity-0 absolute block z-control;
+}
+.button--solid-kind:active::before,
+.button--only-icon.button--decorated-kind:active::before {
+  transition: none !important;
+  opacity: 0.35;
+}
+.button--solid-kind:active::before,
+.button--only-icon.button--decorated-kind:active::before {
+  transform: scaleX(1.05) scaleY(1.2);
+}
+.button--only-icon.button--solid-kind:active::before {
+  transform: scale(1.2);
+}
+.button--only-icon.button--decorated-kind::before {
+  transform: scale(1.27);
+}
+
+.button--ghost-kind {
+  background-color: var(--current-ghost-bg);
+  color: var(--current-ghost-text);
+}
+.button--ghost-kind:hover {
+  background-color: var(--current-ghost-bg-hover);
+  color: var(--current-ghost-text-hover);
+}
+.button--ghost-kind:active {
+  transition-duration: 0.15s;
+  background-color: var(--current-active-bg);
+  color: var(--current-active-text);
+}
+.button--loading.button--ghost-kind:hover,
+.button--loading.button--ghost-kind:active {
+  background-color: var(--current-ghost-bg);
+}
+
+.button--outline-kind {
+  background-color: var(--current-ghost-bg);
+  color: var(--current-ghost-text);
+  border-color: var(--current-bg);
+  border: solid 1px;
+}
+.button--outline-kind:hover {
+  background-color: var(--current-ghost-bg-hover);
+  color: var(--current-ghost-text-hover);
+}
+.button--outline-kind:active {
+  transition-duration: 0.15s;
+  background-color: var(--current-active-bg);
+  color: var(--current-active-text);
+  border-color: var(--current-active-bg);
+}
+.button--loading.button--outline-kind:hover,
+.button--loading.button--outline-kind:active {
+  background-color: var(--current-ghost-bg);
+}
+
+:not(.button--only-icon):not(.button--squared).button--outline-kind {
+  --padding-x: calc(theme(spacing.10) - 0.5px);
+  --padding-y: calc(theme(spacing.2) - 0.5px);
+  padding-top: var(--padding-y);
+  padding-bottom: var(--padding-y);
+  padding-left: var(--padding-x);
+  padding-right: var(--padding-x);
+}
+
+:not(.button--only-icon):not(.button--squared).button--ghost-kind {
+  --padding-x: calc(theme(spacing.10) + 0.5px);
+  --padding-y: calc(theme(spacing.2) + 0.5px);
+  padding-top: var(--padding-y);
+  padding-bottom: var(--padding-y);
+  padding-left: var(--padding-x);
+  padding-right: var(--padding-x);
+}
+
+.button--disabled.button--solid-kind::before,
+.button--disabled.button--decorated-kind::before,
+.button--disabled.button--decorated-kind::before,
+.button--disabled.button--ghost-kind::before,
+.button--disabled.button--outline-kind::before {
+  @apply hidden !important;
+}
+.button--disabled.button--outline-kind {
+  @apply border-disabled;
+}
+/* 
+* END Kind
+*/
+
+/* 
+* Loading
+*/
+.button__loader-centered {
+  @apply absolute;
+}
+.button--loading .button__container__children,
+.button--loading .button__container__icon {
+  @apply transition-none opacity-0;
+}
+/* 
+* END Loading
+*/
+
+/* 
+* Squared
+*/
+.button--squared {
+  width: calc(2.5rem + 1px);
+  height: calc(2.5rem + 1px);
+  @apply p-0;
+}
+
+/* 
+* END Squared
+*/

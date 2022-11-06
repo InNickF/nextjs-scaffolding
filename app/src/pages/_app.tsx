@@ -1,17 +1,16 @@
-import { AppProps } from 'next/app'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import '../commons/styles/index.css'
+import QueryProvider from '@/commons/services/managers/react-query'
+import { ThemeProvider } from '@/commons/contexts/ThemeContext'
+import { AppPropsWithLayout } from '@/commons/typings'
+import '@/commons/styles/index.css'
 
-const queryClient = new QueryClient()
+function App({ Component, pageProps }: AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? ((page) => page)
 
-function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <QueryClientProvider client={queryClient}>
-      <Component {...pageProps} />
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+    <ThemeProvider>
+      <QueryProvider>{getLayout(<Component {...pageProps} />)}</QueryProvider>
+    </ThemeProvider>
   )
 }
 
-export default MyApp
+export default App
